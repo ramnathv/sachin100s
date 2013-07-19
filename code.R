@@ -52,7 +52,7 @@ tpl <- "
 d4 <- alply(d3, 1, function(x){
   list(
     startDate = gsub("-", ",", as.character(x$date)),
-    headline = sprintf("Century No.", x$num),
+    headline = sprintf("Century No. %s", x$num),
     text = whisker.render(tpl, list(x = x)),
     asset = list(media = x$img)
   )
