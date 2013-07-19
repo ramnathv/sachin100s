@@ -18,3 +18,8 @@ If you have any feedback/suggestions post them [here](https://github.com/ramnath
 1. Wikipedia for List of Centuries
 2. http://omgsachin.blogspot.ca/2011/03/sachin-century-of-centuries.html for Images
 3. http://sachin-rameshtendulkar.blogspot.ca/2012/12/sachins-all-odi-centuries-highlights.html for links to ODI century videos on Youtube
+
+
+#### Bugs
+
+1. For ODIs, the video links seem to be incorrectly arranged. I assumed the links were correct, but would have to do some more work to synchronize everything.
