@@ -10,3 +10,8 @@ install_github('rCharts', 'ramnathv', ref = 'dev')
 ```
 
 If you have any feedback/suggestions post theme [here](https://github.com/ramnathv/sachin100s/issues/new)
+
+#### Credits
+
+1. Wikipedia for List of Centuries
+2. http://omgsachin.blogspot.ca/2011/03/sachin-century-of-centuries.html for Images
