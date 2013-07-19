@@ -45,7 +45,8 @@ tpl <- "
 <b>Venue:</b> {{x.venue}}<br/>
 <b>Match:</b> {{x.type}}<br/>
 <b>Score:</b> {{x.score}}<br/>
-<b>Result:</b> <span class={{x.result}}>{{x.result}}</span>
+<b>Result:</b> <span class={{x.result}}>{{x.result}}</span><br/>
+{{#x.sr}}<b>Strike Rate:</b> {{x.sr}} {{/x.sr}}
 "
 
 # Create Event Payload for Timeline
@@ -63,9 +64,12 @@ m = Timeline$new()
 m$main(
   headline =  "100 Centuries of Sachin",
   type = 'default',
-  text = "Sachin",
+  text = "Sachin Tendulkar is widely acknowledged to be one of the greatest cricketers the world has seen. This is a timeline of his 100 centuries, created using rCharts and TimelineJS",
   startDate =  "1990,08,14",
   asset = list(media = 'http://www.youtube.com/watch?v=6PxAandi6r4')
+)
+m$config(
+  font = "Merriweather-Newscycle"
 )
 names(d4) <- NULL
 m$event(d4)
