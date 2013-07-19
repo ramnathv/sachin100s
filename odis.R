@@ -1,7 +1,9 @@
 url <- 'http://sachin-rameshtendulkar.blogspot.ca/2012/12/sachins-all-odi-centuries-highlights.html'
 doc <- htmlParse(url)
-d2$video <- c(xpathSApply(doc, '//embed', xmlGetAttr, 'src'), "", "")
-d2$thumbnail <- c(xpathSApply(doc, '//object', xmlGetAttr, 'data-thumbnail-src'), "", "")
+videos <- xpathSApply(doc, '//embed', xmlGetAttr, 'src')
+thumbnails <- xpathSApply(doc, '//object', xmlGetAttr, 'data-thumbnail-src')
+d2$video <- c(videos[1:3], "", videos[4:7], '', videos[8:47])
+d2$thumbnail <-  c(thumbnails[1:3], "", thumbnails[4:7], '', thumbnails[8:47])
 d2$result <- gsub('^(.*)\\[[0-9]+\\]$', '\\1', d2$result)
 
 
@@ -41,3 +43,4 @@ m$config(
 )
 names(d5) <- NULL
 m$event(d5)
+m$save('odis/index.html')
