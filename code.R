@@ -36,6 +36,7 @@ doc <- htmlParse(url3)
 imgs <- xpathSApply(doc, '//img', xmlGetAttr, 'src')
 d3$imgs <- imgs[grep('[0-9]+\\.jpg$', imgs)]
 d3$result <- gsub('^(.*)\\[[0-9]+\\]$', '\\1', d3$result)
+d3$num <- 1:NROW(d3)
 
 
 # Create Text Template
@@ -51,7 +52,7 @@ tpl <- "
 d4 <- alply(d3, 1, function(x){
   list(
     startDate = gsub("-", ",", as.character(x$date)),
-    headline = paste("Century No.", x$no),
+    headline = paste("Century No.", x$num),
     text = whisker.render(tpl, list(x = x)),
     asset = list(media = x$img)
   )
