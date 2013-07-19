@@ -31,10 +31,11 @@ d2 = data__[[2]][names(d1)]
 d3 = arrange(rbind(d1, d2), date)
 
 # Get Images of Centuries
-url3 <- 'http://omgsachin.blogspot.ca/2011/03/sachin-century-of-centuries.html'
-doc <- htmlParse(url3)
-imgs <- xpathSApply(doc, '//img', xmlGetAttr, 'src')
-d3$imgs <- imgs[grep('[0-9]+\\.jpg$', imgs)]
+# url3 <- 'http://omgsachin.blogspot.ca/2011/03/sachin-century-of-centuries.html'
+# doc <- htmlParse(url3)
+# imgs <- xpathSApply(doc, '//img', xmlGetAttr, 'src')
+# d3$imgs <- imgs[grep('[0-9]+\\.jpg$', imgs)]
+d3$imgs <- paste0('img/c', 1:100, '.jpg')
 d3$result <- gsub('^(.*)\\[[0-9]+\\]$', '\\1', d3$result)
 d3$num <- 1:NROW(d3)
 
