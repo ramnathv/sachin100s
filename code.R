@@ -52,7 +52,7 @@ tpl <- "
 d4 <- alply(d3, 1, function(x){
   list(
     startDate = gsub("-", ",", as.character(x$date)),
-    headline = paste("Century No.", x$num),
+    headline = sprintf("Century No.", x$num),
     text = whisker.render(tpl, list(x = x)),
     asset = list(media = x$img)
   )
@@ -65,7 +65,7 @@ m$main(
   type = 'default',
   text = "Sachin",
   startDate =  "1990,08,14",
-  asset = list(media = 'http://www.hdwallpapers.in/walls/sachin_tendulkar-normal.jpg')
+  asset = list(media = 'http://www.youtube.com/watch?v=6PxAandi6r4')
 )
 names(d4) <- NULL
 m$event(d4)
