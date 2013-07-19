@@ -11,7 +11,7 @@ require(devtools)
 install_github('rCharts', 'ramnathv', ref = 'dev')
 ```
 
-If you have any feedback/suggestions post theme [here](https://github.com/ramnathv/sachin100s/issues/new)
+If you have any feedback/suggestions post them [here](https://github.com/ramnathv/sachin100s/issues/new)
 
 #### Credits
 
